@@ -8,7 +8,7 @@
 - Set
 
 `Array` 比较特殊，有 `push`、`pop`、`shift`、`unshift` 等方法，能够当作栈使用。
-`Map` 映射操作也很常见，减少寻址的时间复杂度。
+`Map` 映射操作也很常见，减少寻址的时间复杂度(经常使用 `Object` 来实现类似功能)。
 
 
 前端常见的算法是
@@ -28,7 +28,7 @@
 | Name   |      value      |  Description |
 |----------|:-------------:|------:|
 | A |  Array | 操作包含数组 |
-| MS |   Map、Set   |   操作包含映射、集合 |
+| MSO |   Map、Set、Object   |   操作包含映射、集合 |
 | I | Iteration |    操作包含迭代 |
 | R | Recursion |    操作包含递归 |
 

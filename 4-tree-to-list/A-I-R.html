@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const data = [
+      {
+        id: 1,
+        text: '节点1',
+        parentId: 0,
+        children: [
+          {
+            id: 2,
+            text: '节点1_1',
+            parentId: 1
+          }
+        ]
+      }
+    ];
+    function treeToList(data) {
+      let res = [];
+      const dfs = (tree) => {
+        tree.forEach((item) => {
+          if (item.children) {
+            dfs(item.children);
+            delete item.children;
+          }
+          res.push(item);
+        });
+      };
+      dfs(data);
+      return res;
+    }
+    const res = treeToList(data);
+    console.log(res);
+  </script>
+</body>
+
+</html>
